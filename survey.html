@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <title>
+	Feed Back Form
+</title>
+ <link href="loginstyle.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+  <h1 id="title">Survey Form</h1>
+  <p id="description">Let us know how we can improve freeCodeCamp</p>
+  
+    <form id="survey-form" action="insert.php" method="POST">
+      <div class="form-group">
+      <label id="name-label" for="name">Name:</label>
+      <input id="name" type="text" name="Name"required placeholder="Enter your first name">
+      <span class="validity"></span>
+      </div>      
+      
+      <div class="form-group">
+      <label id="email-label" for="email">Email:</label>
+      <input id="email" type="email" name="Email"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required placeholder="Enter your email">
+      <span class="validity"></span>
+      </div>
+     
+      <div class="form-group">
+      <label id="number-label" for="number">Your Age:</label>
+      <input id="number" type="number" name="Age" min="10" max="99" step="1" required placeholder="Age">
+      <span class="validity"></span> 
+      </div>
+     
+      <div class="form-group">      
+      <label id="role-label" for="dropdown">What is your current role:</label>
+      <select id="dropdown" name="Role">
+        <option value="" disabled selected>Select an option</option>
+        <option value="student">Student</option>
+        <option value="blogger">Blogger</option>
+        <option value="smb">Employee</option>
+        <option value="agency">Agency</option>
+        <option value="other">Other</option>
+      </select>
+      </div>
+     
+      <div class="form-group">       
+      <p>How likely is that you would recommend freeCodeCamp to a friend?
+</p>
+      <div class="input-group">
+        <label for="yes"><input id="yes" type="radio" name="User-ratingser-rating" value="yes"> Yes</label>
+        <label for="no"><input id="no" type="radio" name="User-rating" value="no"> No</label>
+        <label for="unsure"><input id="unsure" type="radio" name="User-rating" value="notsure"> Not sure</label>
+      </div>
+      </div>
+     <div class="form-group">      
+      <label id="role-label" for="dropdown">What do you like most in FCC:
+</label>
+      <select id="dropdown" name="Liked-thing">
+        <option value="" disabled selected>Select an option</option>
+        <option value="student">Challenges</option>
+        <option value="blogger">Projects</option>
+        
+        <option value="agency">Community</option>
+        <option value="other">Open Source</option>
+      </select>
+      </div>
+      <div class="form-group">       
+      <p>Things that should be improved in the future
+(Check all that apply):
+</p>
+      <div class="input-group">
+        <label><input type="checkbox" name="Improvements" value="events"> Back-End Projects</label>
+        <label><input type="checkbox" name="Improvements" value="widgets"> Front-End Projects</label>
+        <label><input type="checkbox" name="Improvements" value="neglookaheads"> Data Visualization</label>
+        <label><input type="checkbox" name="Improvements" value="keywords"> Challenges</label>
+        <label><input type="checkbox" name="Improvements" value="keywords"> Open Source Community</label>
+       
+      </div>
+      </div>
+     
+      <div class="form-group">
+      <label id="textarea-label" for="comments" name="comments">Comments and suggestions:</label>
+      <textarea id="comments" placeholder="Enter your comments here ..."  cols="30" rows="5"></textarea>
+      </div>
+     
+      <div class="form-group">
+      <input id="submit" class="button" type="submit" value="Submit">
+      </div>
+    </form>
